@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.headerTitle {
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    margin-left: 38%;
+}
+
+.dialogDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15%;
+}
+
+#libraryShowcase {
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-auto-rows: 250px;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card {
+    text-align: center;
+    padding-top: 20px;
+    border: 1px solid lightblue;
+    border-radius: 10px;
+}
+
+.card p {
+    font-size: 20px;
+    margin: 15px;
+}
+
+.readBtn {
+    margin-left: 15px;
+}
