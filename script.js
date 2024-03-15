@@ -6,26 +6,28 @@ const cancelBtn = dialogForm.querySelector("#cancelBtn");
 
 const myLibrary = [];
 
+// Book class
+class Book {
+
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+
+    // Returns a string of Book info. Not used in this project
+    info() {
+        return "Title: " + title + "\n" + "Author: " + author + "\n" + "Pages: " + pages + "\n" + "Status: " + read;
+    }
+}
+
 // Starter books to fill the array
 const harryPotter = new Book("Harry Potter and the Sorcerer's Stone", "J.K. Rowling", "223", true);
 const lotr = new Book("The Fellowship of the Ring", "J.R.R. Tolkien", "432", false);
 const got = new Book("A Game of Thrones", "George R.R. Martin", "694", false);
 const lww = new Book("The Lion, the Witch, and the Wardrobe", "C.S. Lewis", "208", false);
-
 myLibrary.push(harryPotter, lotr, got, lww);
-
-// Constructor for Book object
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-
-    // Returns a string of Book info. Not used in this project
-    this.info = function() {
-        return "Title: " + title + "\n" + "Author: " + author + "\n" + "Pages: " + pages + "\n" + "Status: " + read;
-    }
-}
 
 // Function to toggle status of read/unread added to Book's prototype
 Book.prototype.toggleStatus = function () {
